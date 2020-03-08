@@ -3,7 +3,7 @@ export default {
   output: {
     format: 'umd',
     file: 'index.cjs',
-    name: 'flutureProject',
+    name: 'flutureObserve',
     interop: false
   }
 };
