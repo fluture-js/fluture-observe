@@ -1,6 +1,6 @@
 {
   "name": "fluture-observe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Consume a Future, observing changes to its state",
   "tags": [
     "consume",
