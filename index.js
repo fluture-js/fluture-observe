@@ -85,7 +85,7 @@ export const Crashed = Computation.Crashed;
 //. Represents a computation which rejected with a reason.
 export const Rejected = Computation.Rejected;
 
-//# Resolved :: a -> Computation a b
+//# Resolved :: b -> Computation a b
 //.
 //. Represents a computation which resolved with a value.
 export const Resolved = Computation.Resolved;
