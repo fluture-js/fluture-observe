@@ -1,4 +1,4 @@
-//# Fluture Observe
+//. # Fluture Observe
 //.
 //. Consume a [Fluture][] Future, observing changes to its state as the
 //. consumption is happening.
