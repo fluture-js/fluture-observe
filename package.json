@@ -2,14 +2,21 @@
   "name": "fluture-observe",
   "version": "1.0.2",
   "description": "Consume a Future, observing changes to its state",
-  "tags": [
+  "keywords": [
     "consume",
     "fluture",
     "observe"
   ],
   "type": "module",
-  "main": "index.cjs",
+  "main": "./dist/umd.js",
   "module": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./dist/umd.js"
+    },
+    "./index.js": "./index.js"
+  },
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "codecov": "codecov",
@@ -23,7 +30,7 @@
     "url": "git://github.com/fluture-js/fluture-observe.git"
   },
   "files": [
-    "/index.cjs",
+    "/dist",
     "/index.js",
     "/LICENSE",
     "/package.json",
