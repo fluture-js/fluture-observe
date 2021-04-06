@@ -2,7 +2,8 @@ import pkg from './package.json';
 
 const dependencyNames = Array.prototype.concat.call (
   Object.keys (pkg.dependencies),
-  Object.keys (pkg.peerDependencies)
+  Object.keys (pkg.peerDependencies),
+  ['fluture/index.js']
 );
 
 export default {
@@ -13,6 +14,12 @@ export default {
     file: 'dist/umd.js',
     name: 'flutureObserve',
     exports: 'named',
-    globals: {}
+    globals: {
+      'fluture/index.js': 'Fluture',
+      'daggy': 'daggy'
+    },
+    paths: {
+      'fluture/index.js': 'fluture'
+    }
   }
 };
