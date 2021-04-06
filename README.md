@@ -19,14 +19,14 @@ be used.
 
 You can load the EcmaScript module from various content delivery networks:
 
-- [Skypack](https://cdn.skypack.dev/fluture-observe@1.1.0)
-- [JSPM](https://jspm.dev/fluture-observe@1.1.0)
-- [jsDelivr](https://cdn.jsdelivr.net/npm/fluture-observe@1.1.0/+esm)
+- [Skypack](https://cdn.skypack.dev/fluture-observe@1.1.1)
+- [JSPM](https://jspm.dev/fluture-observe@1.1.1)
+- [jsDelivr](https://cdn.jsdelivr.net/npm/fluture-observe@1.1.1/+esm)
 
 ### Old Browsers and Code Pens
 
 There's a [UMD][] file included in the NPM package, also available via
-jsDelivr: https://cdn.jsdelivr.net/npm/fluture-observe@1.1.0/dist/umd.js
+jsDelivr: https://cdn.jsdelivr.net/npm/fluture-observe@1.1.1/dist/umd.js
 
 This file adds `flutureObserve` to the global scope, or use CommonJS/AMD
 when available.
@@ -63,7 +63,7 @@ const consume = observe (cata ({
 
 ## API
 
-#### <a name="Computation" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.0/index.js#L69">`Computation :: Type`</a>
+#### <a name="Computation" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.1/index.js#L69">`Computation :: Type`</a>
 
 A [Daggy][] tagged union type representing the state of the consumption of
 a Future. The `Cancel` and `Future` types below are imported
@@ -80,35 +80,35 @@ data Computation a b = Idle
 
 Constructor details are documented below.
 
-#### <a name="Idle" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.0/index.js#L94">`Idle :: Computation a b`</a>
+#### <a name="Idle" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.1/index.js#L94">`Idle :: Computation a b`</a>
 
 Represents a not running computation.
 
-#### <a name="Pending" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.0/index.js#L99">`Pending :: Cancel -⁠> Computation a b`</a>
+#### <a name="Pending" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.1/index.js#L99">`Pending :: Cancel -⁠> Computation a b`</a>
 
 Represents a running computation which can be cancelled.
 
-#### <a name="Canceled" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.0/index.js#L104">`Canceled :: Future a b -⁠> Computation a b`</a>
+#### <a name="Canceled" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.1/index.js#L104">`Canceled :: Future a b -⁠> Computation a b`</a>
 
 Represents a computation that was cancelled and can be restarted.
 
-#### <a name="Crashed" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.0/index.js#L109">`Crashed :: Error -⁠> Computation a b`</a>
+#### <a name="Crashed" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.1/index.js#L109">`Crashed :: Error -⁠> Computation a b`</a>
 
 Represents a computation which encountered an exception while running.
 
-#### <a name="Rejected" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.0/index.js#L114">`Rejected :: a -⁠> Computation a b`</a>
+#### <a name="Rejected" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.1/index.js#L114">`Rejected :: a -⁠> Computation a b`</a>
 
 Represents a computation which rejected with a reason.
 
-#### <a name="Resolved" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.0/index.js#L119">`Resolved :: b -⁠> Computation a b`</a>
+#### <a name="Resolved" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.1/index.js#L119">`Resolved :: b -⁠> Computation a b`</a>
 
 Represents a computation which resolved with a value.
 
-#### <a name="cata" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.0/index.js#L124">`cata :: { Idle :: () -⁠> c, Pending :: Cancel -⁠> c, Canceled :: Future a b -⁠> c, Crashed :: Error -⁠> c, Rejected :: a -⁠> c, Resolved :: b -⁠> c } -⁠> Computation a b -⁠> c`</a>
+#### <a name="cata" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.1/index.js#L124">`cata :: { Idle :: () -⁠> c, Pending :: Cancel -⁠> c, Canceled :: Future a b -⁠> c, Crashed :: Error -⁠> c, Rejected :: a -⁠> c, Resolved :: b -⁠> c } -⁠> Computation a b -⁠> c`</a>
 
 [Daggy][]'s catamorphism as a curried function.
 
-#### <a name="observe" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.0/index.js#L133">`observe :: (Computation a b -⁠> Any) -⁠> Future a b -⁠> Undefined`</a>
+#### <a name="observe" href="https://github.com/fluture-js/fluture-observe/blob/v1.1.1/index.js#L133">`observe :: (Computation a b -⁠> Any) -⁠> Future a b -⁠> Undefined`</a>
 
 Consume a Future, observing changes to its state. See [usage](#usage).
 

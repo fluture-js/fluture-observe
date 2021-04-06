@@ -19,14 +19,14 @@
 //.
 //. You can load the EcmaScript module from various content delivery networks:
 //.
-//. - [Skypack](https://cdn.skypack.dev/fluture-observe@1.1.0)
-//. - [JSPM](https://jspm.dev/fluture-observe@1.1.0)
-//. - [jsDelivr](https://cdn.jsdelivr.net/npm/fluture-observe@1.1.0/+esm)
+//. - [Skypack](https://cdn.skypack.dev/fluture-observe@1.1.1)
+//. - [JSPM](https://jspm.dev/fluture-observe@1.1.1)
+//. - [jsDelivr](https://cdn.jsdelivr.net/npm/fluture-observe@1.1.1/+esm)
 //.
 //. ### Old Browsers and Code Pens
 //.
 //. There's a [UMD][] file included in the NPM package, also available via
-//. jsDelivr: https://cdn.jsdelivr.net/npm/fluture-observe@1.1.0/dist/umd.js
+//. jsDelivr: https://cdn.jsdelivr.net/npm/fluture-observe@1.1.1/dist/umd.js
 //.
 //. This file adds `flutureObserve` to the global scope, or use CommonJS/AMD
 //. when available.
