@@ -42,12 +42,12 @@
     "daggy": "^1.4.0"
   },
   "peerDependencies": {
-    "fluture": ">=12.2.0 <13.0.0"
+    "fluture": ">=12.2.0 <15.0.0"
   },
   "devDependencies": {
     "c8": "^7.1.0",
     "codecov": "^3.2.0",
-    "fluture": "^12.2.0",
+    "fluture": "^14.0.0",
     "oletus": "^3.0.0",
     "rollup": "^2.0.0",
     "sanctuary-scripts": "^4.0.0"
